@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00BEB220-8A9E-4E20-B8FA-A5ECA89E49EE}</ProjectGuid>
+    <RootNamespace>AUV</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\Program Files\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>D:\Program Files\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Program Files\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glaux.lib;dinput8.lib;dxguid.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glaux.lib;dinput8.lib;dxguid.lib;comctl32.lib;Winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBC.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="axis.gl" />
+    <None Include="dc10.gl" />
+    <None Include="pool.gl" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\AUV.ico" />
+    <None Include="res\AUV.rc2" />
+    <None Include="res\AUVDoc.ico" />
+    <None Include="res\grid.bmp" />
+    <None Include="res\ss.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="UserImages.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AUV.h" />
+    <ClInclude Include="AUVDoc.h" />
+    <ClInclude Include="AUVView.h" />
+    <ClInclude Include="axis.h" />
+    <ClInclude Include="BAISCOBJ.H" />
+    <ClInclude Include="BottomView.h" />
+    <ClInclude Include="CameraView.h" />
+    <ClInclude Include="CurveView.h" />
+    <ClInclude Include="DriveView.h" />
+    <ClInclude Include="Joystick.h" />
+    <ClInclude Include="LeftView.h" />
+    <ClInclude Include="LocationView.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="motordefine.h" />
+    <ClInclude Include="MySplitWnd.h" />
+    <ClInclude Include="OpenGLView.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SerialPort.h" />
+    <ClInclude Include="ShowView.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="submarinev3.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TopView.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AUV.cpp" />
+    <ClCompile Include="AUVDoc.cpp" />
+    <ClCompile Include="AUVView.cpp" />
+    <ClCompile Include="BAISCOBJ.CPP" />
+    <ClCompile Include="BottomView.cpp" />
+    <ClCompile Include="CameraView.cpp" />
+    <ClCompile Include="CurveView.cpp" />
+    <ClCompile Include="DriveView.cpp" />
+    <ClCompile Include="Joystick.cpp" />
+    <ClCompile Include="LeftView.cpp" />
+    <ClCompile Include="LocationView.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="motordefine.cpp" />
+    <ClCompile Include="MySplitWnd.cpp" />
+    <ClCompile Include="OpenGLView.cpp" />
+    <ClCompile Include="SerialPort.cpp" />
+    <ClCompile Include="ShowView.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TopView.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AUV.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="AUV.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
